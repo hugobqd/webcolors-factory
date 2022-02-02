@@ -1,0 +1,12 @@
+{
+  "name": "webcolors-factory",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hugobqd/webcolors-factory",
+  "author": "Hugo hugobqd@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "node public"
+  }
+}
