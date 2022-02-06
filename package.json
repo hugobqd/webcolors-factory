@@ -12,6 +12,7 @@
   "dependencies": {
     "@chakra-ui/theme": "^1.13.1",
     "@types/node": "^17.0.14",
+    "color-name": "^1.1.4",
     "tailwindcss": "^3.0.18",
     "ts-node": "^10.4.0"
   }

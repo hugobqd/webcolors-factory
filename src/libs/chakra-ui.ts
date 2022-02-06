@@ -1,12 +1,11 @@
 import colors from "@chakra-ui/theme/foundations/colors";
-import { convertCharts } from "../utils/convertChart";
+import { LibData } from "../types";
+import { createArrayFromColorsObject } from "../utils/createArrayFromColorsObject";
 
-const arr = convertCharts(colors, [], "chakra-ui");
-
-export const chakraUi = {
+export const chakraUi: LibData = {
   name: "Chakra-UI",
   slug: "chakra-ui",
   licence: "licence",
-  colors: arr,
+  colors: createArrayFromColorsObject(colors, "chakra-ui"),
   website: "https://chakra-ui.com",
 };

@@ -1,13 +1,17 @@
 // import tailwindcss from "tailwindcss";
 const colors = require("tailwindcss/colors");
-import { convertCharts } from "../utils/convertChart";
+import { LibData } from "../types";
+import { createArrayFromColorsObject } from "../utils/createArrayFromColorsObject";
 
-const arr = convertCharts(colors, [], "tailwindcss");
-
-export const tailwindcss = {
+export const tailwindcss: LibData = {
   name: "Tailwindcss",
   slug: "tailwindcss",
   licence: "licence",
-  colors: arr,
+  colors: createArrayFromColorsObject(colors, "tailwindcss"),
   website: "https://tailwindcss.com",
 };
+
+const toto = {
+  cle: "valeur",
+};
+toto.cle;

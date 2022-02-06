@@ -1,6 +1,6 @@
-import { ColorRGB, ColorLAB } from "../types";
+import { ColorRgb, ColorLAB } from "../types";
 
-export function hexToRgb(hex: string) {
+export function hexToRgb(hex: string): ColorRgb {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
@@ -15,7 +15,7 @@ export function hexToRgb(hex: string) {
       };
 }
 
-export function rgbToLab({ r: R, g: G, b: B }: ColorRGB) {
+export function rgbToLab({ r: R, g: G, b: B }: ColorRgb): ColorLAB {
   let r = R / 255;
   let g = G / 255;
   let b = B / 255;
