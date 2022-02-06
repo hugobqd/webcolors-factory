@@ -4,8 +4,7 @@ import { ColorLAB, ColorRgb, Shade } from "../types";
 export const createArrayFromColorsObject = (obj: object, lib: string) => {
   const resultArray: Shade[] = [];
 
-  //called with every property and its value
-  function process(key: string, value: string, nameStack: string[]) {
+  const process = (key: string, value: string, nameStack: string[]) => {
     if (
       typeof value === "string" &&
       value.slice(0, 1) === "#" &&
@@ -24,11 +23,11 @@ export const createArrayFromColorsObject = (obj: object, lib: string) => {
       };
       resultArray.push(shade);
     } else {
-      console.log("not an hex:", lib, key, value);
+      console.log("🥺 Not an hex:", lib, key, value);
     }
-  }
+  };
 
-  function traverse(obj: object, nameStack: string[]) {
+  const traverse = (obj: object, nameStack: string[]) => {
     for (let [key, value] of Object.entries(obj)) {
       if (value !== null && typeof value == "object") {
         traverse(value, [...nameStack, key]);
@@ -36,7 +35,7 @@ export const createArrayFromColorsObject = (obj: object, lib: string) => {
         process(key, value, nameStack);
       }
     }
-  }
+  };
 
   traverse(obj, []);
 

@@ -1,15 +1,16 @@
 import fs from "fs";
 import path from "path";
-import { chakraUi } from "./libs/chakra-ui";
-import { tailwindcss } from "./libs/tailwindcss";
 import { antd, antdDark } from "./libs/ant-design";
+import { chakraUi } from "./libs/chakra-ui";
+import { css } from "./libs/css";
+import { tailwindcss } from "./libs/tailwindcss";
 import { LibData } from "./types";
 
 const distDir = "dist";
 
 console.time("timer");
 
-const libs: LibData[] = [chakraUi, tailwindcss, antd, antdDark];
+const libs: LibData[] = [chakraUi, tailwindcss, antd, antdDark, css];
 
 const template = ({
   name,
@@ -38,7 +39,7 @@ libs.forEach((lib) => {
     err
   ) {
     if (err) throw err;
-    console.log("Fichier créé !");
+    console.log(`🎨 File ${lib.slug}.js created.`);
   });
 });
 console.timeEnd("timer");

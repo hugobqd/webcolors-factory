@@ -8,6 +8,10 @@ export interface ColorLAB {
   A: number;
   B: number;
 }
+
+export interface LooseObject {
+  [key: string]: any;
+}
 export interface Shade {
   id?: string;
   lib?: string;
