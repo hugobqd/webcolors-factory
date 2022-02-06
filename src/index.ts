@@ -2,13 +2,14 @@ import fs from "fs";
 import path from "path";
 import { chakraUi } from "./libs/chakra-ui";
 import { tailwindcss } from "./libs/tailwindcss";
+import { antd, antdDark } from "./libs/ant-design";
 import { LibData } from "./types";
 
 const distDir = "dist";
 
 console.time("timer");
 
-const libs: LibData[] = [chakraUi, tailwindcss];
+const libs: LibData[] = [chakraUi, tailwindcss, antd, antdDark];
 
 const template = ({
   name,
