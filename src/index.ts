@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { antd, antdDark } from "./libs/ant-design";
+import { bootstrap } from "./libs/bootstrap";
 import { chakraUi } from "./libs/chakra-ui";
 import { css } from "./libs/css";
 import { tailwindcss } from "./libs/tailwindcss";
@@ -10,7 +11,7 @@ const distDir = "dist";
 
 console.time("timer");
 
-const libs: LibData[] = [chakraUi, tailwindcss, antd, antdDark, css];
+const libs: LibData[] = [bootstrap, chakraUi, tailwindcss, antd, antdDark, css];
 
 const template = ({
   name,

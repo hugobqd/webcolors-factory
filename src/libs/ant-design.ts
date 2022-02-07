@@ -35,7 +35,6 @@ function convertAntD(obj: object) {
 const colors = convertAntD(presetPalettes);
 const darkColors = convertAntD(presetDarkPalettes);
 
-convertAntD(colors);
 export const antd: LibData = {
   name: "Ant Design",
   slug: "antd",
