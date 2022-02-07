@@ -17,7 +17,7 @@ const colors = convertCss(cssColors);
 export const css: LibData = {
   name: "css",
   slug: "css",
-  licence: "licence",
+  licence: "Copyright © 2021 W3C® (MIT, ERCIM, Keio, Beihang)",
   colors: createArrayFromColorsObject(colors, "css"),
   website: "https://www.w3.org/TR/css-color-4/",
 };
