@@ -41,3 +41,7 @@ export function rgbToLab({ r: R, g: G, b: B }: ColorRgb): ColorLAB {
     B: 200 * (y - z),
   };
 }
+
+// See http://www.w3.org/TR/AERT#color-contrast
+export const getBrightness = ({ r, g, b }: ColorRgb): number =>
+  (r * 299 + g * 587 + b * 114) / 1000;

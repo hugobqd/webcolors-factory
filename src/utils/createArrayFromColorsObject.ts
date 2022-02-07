@@ -1,4 +1,4 @@
-import { hexToRgb, rgbToLab } from "./colors";
+import { getBrightness, hexToRgb, rgbToLab } from "./colors";
 import { ColorLAB, ColorRgb, Shade } from "../types";
 
 export const createArrayFromColorsObject = (obj: object, lib: string) => {
@@ -20,6 +20,7 @@ export const createArrayFromColorsObject = (obj: object, lib: string) => {
         id: id,
         rgb: rgb,
         LAB: rgbToLab(rgb),
+        brightness: getBrightness(rgb),
       };
       resultArray.push(shade);
     } else {
