@@ -15,7 +15,7 @@ function convertCss(obj: object) {
 const colors = convertCss(cssColors);
 
 export const css: LibData = {
-  name: "css",
+  name: "CSS",
   slug: "css",
   licence: "Copyright © 2021 W3C® (MIT, ERCIM, Keio, Beihang)",
   colors: createArrayFromColorsObject(colors, "css"),

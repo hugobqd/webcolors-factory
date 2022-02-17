@@ -4,7 +4,7 @@ import { createArrayFromColorsObject } from "../utils/createArrayFromColorsObjec
 
 export const chakraUi: LibData = {
   name: "Chakra-UI",
-  slug: "chakra-ui",
+  slug: "chakraUi",
   licence: `MIT License
 
 Copyright (c) 2019 Segun Adebayo

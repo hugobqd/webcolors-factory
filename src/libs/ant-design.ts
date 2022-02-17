@@ -60,14 +60,14 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`;
 
 export const antd: LibData = {
   name: "Ant Design",
-  slug: "antd",
+  slug: "antDesign",
   licence: licence,
   colors: createArrayFromColorsObject(colors, "antd"),
   website: "https://ant.design",
 };
 export const antdDark: LibData = {
   name: "Ant Design dark",
-  slug: "antd-dark",
+  slug: "antDesignDark",
   licence: licence,
   colors: createArrayFromColorsObject(darkColors, "antdDark"),
   website: "https://ant.design",

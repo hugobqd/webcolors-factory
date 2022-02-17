@@ -29,3 +29,10 @@ export interface LibData {
   colors: Shade[];
   website: string;
 }
+
+export interface Lib {
+  name: string;
+  slug: string;
+  website: string;
+  colors: Shade[];
+}
