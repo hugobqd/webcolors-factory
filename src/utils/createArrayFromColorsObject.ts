@@ -1,30 +1,31 @@
-import { getBrightness, hexToRgb, rgbToLab } from "./colors";
-import { ColorLAB, ColorRgb, Shade } from "../types";
+import { getBrightness, hexToRgb, rgbToHslString, rgbToLAB } from "./colors";
+import { Shade } from "../types";
 
-export const createArrayFromColorsObject = (obj: object, lib: string) => {
+export const createArrayFromColorsObject = (obj: object, slug: string) => {
   const resultArray: Shade[] = [];
 
   const process = (key: string, value: string, nameStack: string[]) => {
     if (
       typeof value === "string" &&
       value.slice(0, 1) === "#" &&
-      value.length === 7
+      (value.length === 7 || value.length === 4)
     ) {
       const name = [...nameStack, key].join(".");
-      const id = `${lib}-${name.replace(".", "-")}`;
+      const id = `${slug}-${name.replace(".", "-")}`;
       const rgb = hexToRgb(value);
       const shade: Shade = {
         name: name,
         hex: value,
-        lib: lib,
+        slug: slug,
         id: id,
         rgb: rgb,
-        LAB: rgbToLab(rgb),
+        LAB: rgbToLAB(rgb),
         brightness: getBrightness(rgb),
+        hsl: rgbToHslString(rgb),
       };
       resultArray.push(shade);
     } else {
-      console.log("🥺 Not an hex:", lib, key, value);
+      console.log("🥺 Not an hex:", slug, key, value);
     }
   };
 

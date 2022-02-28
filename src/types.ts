@@ -14,12 +14,13 @@ export interface LooseObject {
 }
 export interface Shade {
   id: string;
-  lib: string;
+  slug: string;
   name: string;
   hex: string;
   rgb: ColorRgb;
   LAB: ColorLAB;
   brightness: number;
+  hsl: string;
 }
 
 export interface LibData {

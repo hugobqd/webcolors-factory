@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { antd, antdDark } from "./libs/ant-design";
+import { antd, antdDark } from "./libs/antdesign";
 import { bootstrap } from "./libs/bootstrap";
 import { chakraUi } from "./libs/chakraui";
 import { css } from "./libs/css";

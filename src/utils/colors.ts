@@ -1,4 +1,9 @@
 import { ColorRgb, ColorLAB } from "../types";
+import { TinyColor } from "@ctrl/tinycolor";
+
+export const rgbToHslString = (rgb: ColorRgb) => {
+  return new TinyColor(rgb).toHslString();
+};
 
 export function hexToRgb(hex: string): ColorRgb {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -15,7 +20,7 @@ export function hexToRgb(hex: string): ColorRgb {
       };
 }
 
-export function rgbToLab({ r: R, g: G, b: B }: ColorRgb): ColorLAB {
+export function rgbToLAB({ r: R, g: G, b: B }: ColorRgb): ColorLAB {
   let r = R / 255;
   let g = G / 255;
   let b = B / 255;

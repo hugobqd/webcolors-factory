@@ -4,7 +4,7 @@ import { createArrayFromColorsObject } from "../utils/createArrayFromColorsObjec
 
 export const chakraUi: LibData = {
   name: "Chakra-UI",
-  slug: "chakraUi",
+  slug: "chakraui",
   licence: `MIT License
 
 Copyright (c) 2019 Segun Adebayo
@@ -26,6 +26,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`,
-  colors: createArrayFromColorsObject(colors, "chakra-ui"),
+  colors: createArrayFromColorsObject(colors, "chakraui"),
   website: "https://chakra-ui.com",
 };
